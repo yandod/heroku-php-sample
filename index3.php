@@ -7,16 +7,15 @@ $facebook = new Facebook(array(
 
 $user = $facebook->getUser();
 
-$user_profile = array();
 if ($user) {
   $user_profile = $facebook->api('/me');
   $url = $facebook->getLogoutUrl();
 } else {
+  $user_profile = array();
   $url = $facebook->getLoginUrl();
 }
-
-echo $url;
 ?>
+<a href="<?php echo $url; ?>">login / logout</a>
 <pre>
 <?php var_dump($user_profile); ?>
 </pre>
