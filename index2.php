@@ -5,7 +5,7 @@ $facebook = new Facebook(array(
   'secret' => getenv('FACEBOOK_SECRET'),
 ));
 
-$zack = $facebook->api('/zack');
+$zack = $facebook->api('/zuck');
 ?>
 <pre>
 <?php
