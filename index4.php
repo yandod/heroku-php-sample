@@ -8,7 +8,7 @@ $facebook = new Facebook(array(
 $user = $facebook->getUser();
 $friends = null;
 if ($user) {
-  $friends = $facebook->api('/me/friends');
+  $friends = $facebook->api('/me/likes');
 }
 ?>
 <a href="<?php echo $facebook->getLoginUrl(); ?>">login / logout</a>
